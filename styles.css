@@ -1,0 +1,10 @@
+
+/* styles.css */
+.forecast-card {
+    transition: transform 0.2s;
+}
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+

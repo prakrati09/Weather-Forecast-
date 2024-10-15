@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md relative">
+        <!-- Make the container relative -->
+        <h1 class="text-2xl font-bold text-center mb-6">Weather App</h1>
+        <div class="search flex flex-col sm:flex-row justify-between mb-4 relative">
+            <!-- Add relative positioning to search -->
+            <input type="text" id="city-input" placeholder="Enter city name"
+                class="w-full sm:w-2/3 p-2 border border-gray-300 rounded-lg mb-2 sm:mb-0" autocomplete="off">
+            <div class="flex space-x-2 w-full sm:w-auto">
+                <button id="search-btn"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 w-full sm:w-auto">Search</button>
+                <button id="current-location-btn"
+                    class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 w-full sm:w-auto">Current
+                    Location</button>
+            </div>
+        </div>
+
+        <!-- Dropdown for previously searched cities -->
+       
+        <div id="dropdown"
+            class="absolute bg-white border border-gray-300 rounded-lg mt-1 hidden w-full max-h-60 overflow-y-auto z-10">
+            <!-- Dropdown items will be populated here -->
+            <div id="dropdown-items"></div> <!-- Container for dropdown items -->
+            <!-- Show More button -->
+        </div>
+
+        <div id="weather-display">
+            <div id="current-weather" class="mb-6">
+                <!-- Current weather details will be displayed here -->
+            </div>
+            <div id="forecast">
+                <!-- 5-day forecast will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
